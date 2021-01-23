@@ -2,71 +2,78 @@
 <html lang="fr" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <link url="style.css" type="stylesheet">
-  <script url="app.js"></script>
+  <link rel="stylesheet" href="styles.css">
   <title>Alan Turing</title>
   <link rel="shortcut icon" href="groarg.ico">
 </head>
+
 <body>
-
   <div id="histoire">
-    <div id="presentation">
-      <h1>Alan Turing</h1>
-      <h2>Informaticien, Mathématicien, Cryptanalyste, Biologiste & Marathonien</h2>
-      <h4>23 juin 1912 - 7 juin 1954</h4>
-      <img src="" alt="Alan Turing">
+    <div id="presentation" class="sections">
+      <div class="image"><img src="AlanTuring16.jpg" width="100%" alt="Alan Turing"></div>
+      <div class="texte">
+        <h1>Alan Turing</h1>
+        <h2>Informaticien, Mathématicien, Cryptanalyste, Biologiste & Marathonien</h2>
+        <h4>23 juin 1912 - 7 juin 1954</h4>
+     </div>
     </div>
 
-    <div id="1936">
-      <h1> 1936 </h1>
-      <h4> "On computable numbers" </h4>
-      <ul>
-        <li>Résolution du <a href="https://fr.wikipedia.org/wiki/Probl%C3%A8me_de_la_d%C3%A9cision">problème de l'arrêt</a>...</li>
-        <li>... grâce à la <a href="https://fr.wikipedia.org/wiki/Machine_de_Turing">machine de Turing</a></li>
-      </ul>
-      <!-- image a faire glisser depuis la droite -->
-      <img src="" alt="Schéma représentant le fonctionnement de la machine de Turing">
-      <p> La machine de Turing est un modèle abstrait du fonctionnement des ordinateurs. Pour <a href="https://youtu.be/7dpFeXV_hqs?t=101">mieux comprendre</a></p>
+    <div id="_1936" class="sections">
+      <div class="texte">
+        <h1> 1936 </h1>
+        <h4> "On computable numbers" </h4>
+        <ul>
+          <li>Résolution du <a href="https://fr.wikipedia.org/wiki/Probl%C3%A8me_de_la_d%C3%A9cision">problème de l'arrêt</a>...</li>
+          <li>... grâce à la <a href="https://fr.wikipedia.org/wiki/Machine_de_Turing">machine de Turing</a></li>
+        </ul>
+        <p> La tête (en blanc) lit le ruban (en noir) et modifie son état en fonction de ce qu'elle lit et de son programme, cela représente la base de l'algorithmique. Pour <a href="https://youtu.be/7dpFeXV_hqs?t=101">mieux comprendre</a></p>
+     </div>
+      <div class="image"><img class="image" src="MachineTuring.png" height="100%" alt="Schéma représentant le fonctionnement de la machine de Turing"></div>
     </div>
 
-    <div id="guerre">
-      <h1>Guerre 39-45</h1>
-      <h4>Mission: décrypter <i><a href="https://fr.wikipedia.org/wiki/Enigma_(machine)">Enigma</a></i></h4>
-      <img src="" alt="Une bombe cryptographique">
-      <ul>
-        <li>Travaille au service en cryptographie du GC & CS</li>
-        <li>Créé la <a href="https://fr.wikipedia.org/wiki/Bombe_(%C3%A9lectrom%C3%A9canique)">bombe cryptographique</a> qui teste toutes les combinaisons possibles</li>
-        <li>Résultat: guerre probablement raccourcie de 2ans et 14M de vies sauvées</li>
-      </ul>
-      <button type="button" name="">+ d'infos</button>
-      <!-- visible en appuyant sur le bouton -->
-      <p>La bombe cryptologique teste toutes les combinaisons d'<i>Enigma</i> possibles: Au moyen d'un fragment de texte en clair (=le message non crypté), la bombe recherche les réglages corrects possibles utilisés pour 24 heures (ordre des rotors, réglages des rotors et enfichage du tableau de connexions). Pour chaque réglage possible des rotors, la bombe effectue électriquement une chaîne de déductions logiques fondées sur les mots probables. À chaque occurrence d'une contradiction, la bombe écarte ce réglage et passe au suivant. La plupart des réglages essayés provoquent des contradictions, ils sont alors rejetés et ceux qui restent, peu nombreux, sont alors examinés de près --> c'est l'ancêtre du <a href="https://fr.wikipedia.org/wiki/Attaque_par_force_brute">bruteforce</a> en cryptanalyse avec des conditions</p>
-      <h4>Pour mieux comprendre (quand même mieux que le paragraphe):</h4>
-      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/7dpFeXV_hqs?start=198" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div id="guerre" class="sections">
+      <div class="texte">
+        <h1>Guerre 39-45</h1>
+        <h4>Mission: décrypter <i><a href="https://fr.wikipedia.org/wiki/Enigma_(machine)">Enigma</a></i></h4>
+        <img src="BombeCryptographique.jpg" alt="Une bombe cryptographique">
+        <ul>
+          <li>Travaille au service en cryptographie du GC & CS</li>
+          <li>Créé la <a href="https://fr.wikipedia.org/wiki/Bombe_(%C3%A9lectrom%C3%A9canique)">bombe cryptographique</a> qui teste toutes les combinaisons possibles</li>
+          <li>Résultat: guerre probablement raccourcie de 2ans et 14M de vies sauvées</li>
+        </ul>
+        <button class="accordion">+ d'infos</button>
+        <!-- visible en appuyant sur le bouton -->
+        <div class="panel"><p>La bombe cryptologique teste toutes les combinaisons d'<i>Enigma</i> possibles: Au moyen d'un fragment de texte en clair (=le message non crypté), la bombe recherche les réglages corrects possibles utilisés pour 24 heures (ordre des rotors, réglages des rotors et enfichage du tableau de connexions). Pour chaque réglage possible des rotors, la bombe effectue électriquement une chaîne de déductions logiques fondées sur les mots probables. À chaque occurrence d'une contradiction, la bombe écarte ce réglage et passe au suivant. La plupart des réglages essayés provoquent des contradictions, ils sont alors rejetés et ceux qui restent, peu nombreux, sont alors examinés de près --> c'est l'ancêtre du <a href="https://fr.wikipedia.org/wiki/Attaque_par_force_brute">bruteforce</a> en cryptanalyse avec des conditions</p>
+        <h4>Pour mieux comprendre (quand même mieux que le paragraphe):</h4>
+      </div>
+    </div>
+      <div class="image"><div class="videocontainer"><iframe class="videoi-frame" width="560" height="315" src="https://www.youtube-nocookie.com/embed/7dpFeXV_hqs?start=198" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
     </div>
 
-    <div id="film">
+    <img src="BackgroundImitationGame.jpg" alt="Affiche du film « The imitation game »" id="filmpict">
+    <div id="film" class="sections">
       <h1>The Imitation Game</h1>
       <h2> Biographie cinématographique sortie en 2014 </h2>
-      <img src="" alt="Affiche du film « The imitation game »">
-      <p>Sorti en 2014,<a href="https://fr.wikipedia.org/wiki/Imitation_Game" target="_blank">The Imitation Game</a> est très apprécié par les spectateurs, il montre la complexité de la situation d'Alan Turing durant la guerre, et ses efforts pour défendre son projet de bombe cryptographique contre <i>Enigma</i></p>
+      <p>Sorti en 2014, <a href="https://fr.wikipedia.org/wiki/Imitation_Game" target="_blank">The Imitation Game</a> est très apprécié par les spectateurs, il montre la complexité de la situation d'Alan Turing durant la guerre, et ses efforts pour défendre son projet de bombe cryptographique contre <i>Enigma</i></p>
     </div>
 
-    <div id="1950">
-      <h1> 1950 </h1>
-      <h4> "Computing Machinery and Intelligence" </h4>
-      <p>Prémices de l'IA & <a href="https://fr.wikipedia.org/wiki/Test_de_Turing">test de Turing</a></p>
-      <ul>
-        <li>Epreuve permettant de qualifier une machine de « consciente »</li>
-        <li>Test encore non résolu en 2020 (ouf)</li>
-      </ul>
-      <img src="" alt="Schéma représentant le test de Turing">
+    <div id="_1950" class="sections">
+      <div class="texte">
+        <h1> 1950 </h1>
+        <h4> "Computing Machinery and Intelligence" </h4>
+        <p>Prémices de l'IA & <a href="https://fr.wikipedia.org/wiki/Test_de_Turing" target="_blank">test de Turing</a></p>
+        <ul>
+          <li>Epreuve permettant de qualifier une machine de « consciente »</li>
+          <li>Test encore non résolu en 2020 (ouf)</li>
+        </ul>
+     </div>
+      <div class="image"><img width="100%" src="TestTuring.svg" alt="Schéma représentant le test de Turing"></div>
     </div>
 
-    <div id="1952-54">
+    <div id="_1952-54" class="sections">
       <h1>1952-54</h1>
       <h2>Poursuites judiciaires & mort</h2>
-      <div> <h1>Homosexualité</h1> <p>& <a href="https://fr.wikipedia.org/wiki/Cinq_de_Cambridge">affaire des Cinq de Cambridge</a>: espionnage scientifique au profit de l'Union soviétique par des intellectuels anglais homosexuels</p> </div>
+      <div> <h1>Homosexualité</h1> <p>& <a href="https://fr.wikipedia.org/wiki/Cinq_de_Cambridge" target="_blank">affaire des Cinq de Cambridge</a>: espionnage scientifique au profit de l'Union soviétique par des intellectuels anglais homosexuels</p> </div>
       <!-- flèche droite -->
       <div> <h1>Prison</h1></div> <!-- barré écrit à coté "perte de temps" -->
       <!-- flèche droite -->
@@ -77,54 +84,53 @@
   </div>
 
   <div id="funfacts">
-    <div id="pomme">
-      <h2>La pomme retrouvée lors de son suicide était elle empoisonnée ?</h2>
-      <img src="" alt="pomme croquée retrouvée ">  <!-- Réponse lorsque l'on hover la pomme : on ne sait pas héhé | Lorsque l'on clique : Mais il se pourrait (on ne sait pas grand chose, oui) que ce soit une référence volontaire de Turing au comte de Blanche Neige -->
-    </div>
-
-    <div id="logoapple">
+    <div id="logoapple" class="sections">
       <h2> Logo d'apple, un hommage à Turing ? </h2>
-      <img src="" alt="logo apple">
+      <img src="AppleLogo.svg" width="100%" alt="logo apple">
       <h1 class="bigletter">=</h1>
-      <img src="" alt="pomme croquée retrouvée">
+      <img src="BittenApple.png" width="100%" alt="pomme croquée retrouvée">
       <p> La pomme croquée retrouvée à coté de Turing lors de son suicide</p>
       <h1 class="bigletter">?</h1>
-      <button type="button" name="oui">oui</button>
-      <button type="button" name="non">non</button>
+      <button type="button" onclick="apples()">oui</button>
+      <button type="button" onclick="apples()">non</button>
+      <p id="applerep"></p>
     </div>
 
-    <div id="nvidia">
+    <div id="nvidia" class="sections">
       <h2>Une <a href="https://www.nvidia.com/fr-fr/geforce/turing/" target="_blank" title="Architecture Turing">nouvelle architecture de GPU</a></h2>
       <p>En août 2018, Nvidia annonce une nouvelle architecture de GPU appelée "Turing", en référence bien sûr à notre cher Alan, d'autant plus que la nouvelle architecture apporte des cœurs spéciaux dédiés à l'IA.</p>
     </div>
 
-    <div id="bombesecrete">
+    <div id="bombesecrete" class="sections">
       <h1>Travaux secrets</h1>
-      <h4>En quelle année (ex: 2077) ses travaux contre <i>Enigma</i> ont ils commencés à être rendus publics ?</h4>
+      <h4>En quelle année (ex: 2077) ses travaux contre <i>Enigma</i> ont ils commencé à être rendus publics ?</h4>
       <p>(il est possible que vous receviez quelques alertes JS)</p>
-      <input type="text" name="Année : " value=""> <!-- Losque juste : Ses travaux sur Enigma n'ont donc pas pu le défendre contre sa condamnation -->
+      <input id="year" type="number" name="Année : " value="">
+      <button type="button" onclick="year()">Envoyer</button>
+      <p id="year-+" class="bigletter"></p>
+      <p id="yearrep"></p>
     </div>
 
-    <div id="biologie">
+    <div id="biologie" class="sections">
       <h1>Biologie</h1>
-      <h4>"<a href="https://fr.wikipedia.org/wiki/The_Chemical_Basis_of_Morphogenesis">The Chemical Basis of Morphogenesis</a>"</h4>
-      <img src="" alt="modèle morphogénèse Turing">
+      <h4>"<a href="https://fr.wikipedia.org/wiki/The_Chemical_Basis_of_Morphogenesis" target="_blank">The Chemical Basis of Morphogenesis</a>"</h4>
+      <img src="Structures.jpg" alt="modèle morphogénèse Turing">
       <ul>
-        <li>En 1952, Turing propose 3 modèles d'organisation du vivant (de <a href="https://fr.wikipedia.org/wiki/Morphogen%C3%A8se">morphogénèse</a>)</li>
+        <li>En 1952, Turing propose 3 modèles d'organisation du vivant (de <a href="https://fr.wikipedia.org/wiki/Morphogen%C3%A8se" target="_blank">morphogénèse</a>)</li>
         <li>Ses modèles ont été vérifiés dans les années 90 !</li>
       </ul>
     </div>
 
-    <div id="sport">
+    <div id="sport" class="sections">
       <h1>Sportif !</h1>
       <h4>Il finit 4ème au <a href="https://fr.wikipedia.org/wiki/Association_d%27athl%C3%A9tisme_amateur_d%27Angleterre" title="AAA Marathon" target="_blank">AAA Marathon</a></h4>
       <p>C'est le championnat d'athlétisme le plus prestigieux d'Angleterre dont les meilleurs partent aux JO</p>
-      <img src="" alt="photo Tugin marathon (source imitation game ?)">
+      <img src="TuringMarathon.jpg" width="100%" alt="photo Tugin marathon (source imitation game ?)">
     </div>
 
-    <div id="prixturing">
+    <div id="prixturing" class="sections">
       <h1>Prix Turing</h1>
-      <p>Le <a href="https://fr.wikipedia.org/wiki/Prix_Turing">prix Turing</a> est l'équivalent du nobel en informatique créé en 1966 par l'<a href="https://fr.wikipedia.org/wiki/Association_for_Computing_Machinery">ACM</a></p>
+      <p>Le <a href="https://fr.wikipedia.org/wiki/Prix_Turing" target="_blank">prix Turing</a> est l'équivalent du nobel en informatique créé en 1966 par l'<a href="https://fr.wikipedia.org/wiki/Association_for_Computing_Machinery" target="_blank">ACM</a></p>
       <caption>Certains lauréats</caption>
       <table>
         <tr>
@@ -140,7 +146,7 @@
         <tr>
           <td>1983</td>
           <td><a href="https://fr.wikipedia.org/wiki/Kenneth_Thompson" title="Kenneth Thompson" target="_blank">Kenneth Thompson</a> et <a href="https://fr.wikipedia.org/wiki/Dennis_Ritchie" title="Dennis Ritchie" target="_blank">Dennis Ritchie</a></td>
-          <td>Théorie des <a href="https://fr.wikipedia.org/wiki/Syst%C3%A8mes_d%27exploitation" title="Systèmes d&#39;exploitation">OS</a>, système <a href="https://fr.wikipedia.org/wiki/UNIX" class="mw-redirect" title="UNIX" target="_blank">UNIX</a></td>
+          <td>Théorie des <a href="https://fr.wikipedia.org/wiki/Syst%C3%A8mes_d%27exploitation" title="Systèmes d&#39;exploitation" target="_blank">OS</a>, système <a href="https://fr.wikipedia.org/wiki/UNIX" class="mw-redirect" title="UNIX" target="_blank">UNIX</a></td>
         </tr>
         <tr>
           <td>2016</td>
@@ -150,12 +156,15 @@
         <tr>
           <td>2018</td>
           <td><a href="https://fr.wikipedia.org/wiki/Yann_Le_Cun" title="Yann Le Cun" target="_blank">Yann Le Cun</a></td>
-          <td>Avancées techniques en <a href="https://fr.wikipedia.org/wiki/Deep_learning" class="mw-redirect" title="Deep learning" target="_blank">Deep learning</a></td>
+          <td>Avancées techniques en <a href="https://fr.wikipedia.org/wiki/Deep_learning" title="Deep learning" target="_blank">Deep learning</a></td>
         </tr>
       </table>
-    </ul>
+    </div>
   </div>
 </div>
-
+  <footer>
+    <button type="button" onclick="window.location.href='Troll.html';">Le bouton sur lequel ne surtout surtout pas appuyer</button>
+  </footer>
+  <script src="app.js"></script>
 </body>
 </html>
