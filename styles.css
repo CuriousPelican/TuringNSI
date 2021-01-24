@@ -369,13 +369,24 @@ body {
 
 
 footer {
-  background: linear-gradient(90deg, rgba(35,235,223,0.2) 0%, rgba(4,168,119,0.2) 100%);
+  background: linear-gradient(45deg, rgba(235,147,90,1) 0%, rgba(211,71,104,1) 100%);
   padding: 0% 2%;
   margin: 10% 20% 0 20%;
-  border-top: 8px solid #082424;
-  border-left: 8px solid #082424;
-  border-right: 8px solid #082424;
+  border-top: 4px solid black;
+  border-left: 4px solid black;
+  border-right: 4px solid black;
   border-top-left-radius: 50px; border-top-right-radius: 50px;
+  color: black;
+}
+footer a {
+  color: black;
+}
+footer #groarginclogo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-bottom: 2%;
 }
 footer > #row {
   display: flex;
