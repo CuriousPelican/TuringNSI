@@ -100,7 +100,7 @@ body {
   margin-left: 3em;
   border-radius: 4em;
 }
-#panel {
+#infoguerre {
   display: none;
 }
 
@@ -188,14 +188,17 @@ body {
 
 
 #separator {
-  margin: 10% 0 20% 0;
+  margin: 5% 0 15% 0;
   display: flex;
   justify-content: center;
 }
 #separator > #FFbutton {
   padding: 1em 2em;
-  font-size: 2.5em;
+  font-size: 2em;
   border-radius: 500px;
+}
+#funfacts {
+  display: none;
 }
 
 

@@ -39,10 +39,10 @@
           <li>Créé la <a href="https://fr.wikipedia.org/wiki/Bombe_(%C3%A9lectrom%C3%A9canique)"><b>bombe cryptographique</b></a> qui teste toutes les combinaisons possibles</li>
           <li>Résultat: guerre probablement raccourcie de 2ans et 14M de vies sauvées</li>
         </ul>
-        <button type="button" onclick="infos()">+ d'infos</button>
+        <button type="button" onclick="more('infoguerre')">+ d'infos</button>
       </div>
         <img src="BombeCryptographique.jpg" alt="Une bombe cryptographique" id="BombeCryptographique">
-      <div id="panel" class="texte2">
+      <div id="infoguerre" class="texte2">
         <br><p>La bombe cryptologique teste toutes les combinaisons d'<i>Enigma</i> possibles: Au moyen d'un fragment de texte en clair (=le message non crypté), la bombe recherche les réglages corrects possibles utilisés pour 24 heures (ordre des rotors, réglages des rotors et enfichage du tableau de connexions). Pour chaque réglage possible des rotors, la bombe effectue électriquement une chaîne de déductions logiques fondées sur les mots probables. À chaque occurrence d'une contradiction, la bombe écarte ce réglage et passe au suivant. La plupart des réglages essayés provoquent des contradictions, ils sont alors rejetés et ceux qui restent, peu nombreux, sont alors examinés de près --> c'est l'ancêtre du <a href="https://fr.wikipedia.org/wiki/Attaque_par_force_brute">bruteforce</a> en cryptanalyse avec des conditions</p>
         <h4><a href="https://www.youtube-nocookie.com/embed/7dpFeXV_hqs?start=198">Pour comprendre (quand même mieux que le paragraphe)</a> </h4>
       </div>
@@ -83,7 +83,7 @@
     </div>
   </div>
 
-  <div id="separator"> <button type="button" id="FFbutton">Groarg !</button> </div>
+  <div id="separator"> <button type="button" id="FFbutton" onclick="more('funfacts')">Groarg !</button> </div>
 
   <div id="funfacts">
     <div id="logoapple">
@@ -174,16 +174,25 @@
     </div>
   </div>
   <footer>
-    <div class="col1">
-
+    <img src="" alt="GroargIncLogo">
+    <div id="columns">
+      <div class="col1">
+        <p><a href="https://fr.wikipedia.org/wiki/Alan_Turing">Source principale</a></p>
+        <button type="button" onclick="window.location.href='Troll.html';">Le bouton sur lequel ne surtout surtout pas appuyer</button>
+      </div>
+      <div class="col2">
+        <p>Nous contacter:</p>
+        <p>xXDarkShadowSniperXx@wanahoo.fr</p>
+      </div>
+      <div class="col3">
+        <p>Nos reseaux:</p>
+        <img src="logocatvideos.svg" alt="logocatvideos">
+        <img src="logofacebookstalker.png" alt="logofacebookstalker">
+        <img src="logotiktok.png" alt="logotiktok">
+        <img src="logotwitter.png" alt="logotwitter">
+      </div>
     </div>
-    <div class="col2">
-
-    </div>
-    <div class="col3">
-
-    </div>
-    <button type="button" onclick="window.location.href='Troll.html';">Le bouton sur lequel ne surtout surtout pas appuyer</button>
+    <p>© Egoistcorp - 2020 - <a href="../CharlesBabbage/404.html">+∞</a></p>
   </footer>
   <script src="app.js"></script>
 </body>

@@ -20,12 +20,12 @@ function year() {
   }
 }
 
-function infos() {
-    var panel = document.getElementById("panel");
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    }
-    else {
-      panel.style.display = "block";
-    }
+function more(id) {
+  var panel = document.getElementById(id);
+  if (panel.style.display === "block") {
+    panel.style.display = "none";
+  }
+  else {
+    panel.style.display = "block";
+  }
 }
