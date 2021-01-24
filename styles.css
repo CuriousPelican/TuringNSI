@@ -70,8 +70,7 @@ body {
   background: linear-gradient(45deg, rgba(235,117,35,1) 0%, rgba(168,4,43,1) 100%);
   border-radius: 50px;
   padding: 3em;
-  margin-right: 8em;
-  max-height: ;
+  margin-right: 6vw;
 }
 
 
@@ -85,7 +84,7 @@ body {
   padding: 3% 2%;
 }
 #guerre > .texte {
-  width: 40vw;
+  width: 35vw;
   text-align: justify;
 }
 #guerre > .texte li {
@@ -95,8 +94,7 @@ body {
   text-align: justify;
 }
 #guerre > #BombeCryptographique {
-  width: 30vw;
-  height: 20em;
+  height: 18vw;
   margin-left: 3em;
   border-radius: 4em;
 }
@@ -130,19 +128,20 @@ body {
 #_1950 {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row-reverse;
   margin: 10% 12vw;
   padding: 3% 2%;
 }
 #_1950 > .texte {
-  width: 35vw;
+  width: 40vw;
   margin-top: 2%;
   text-align: right;
-  margin-right: 5em;
+  margin-right: 4vw;
 }
 #_1950 > .texte > p {
 }
 #_1950 > #TestTuring {
-  width: 18vw;
+  height: 20vw;
   background: linear-gradient(45deg, rgba(235,117,35,1) 0%, rgba(168,4,43,1) 100%);
   border-radius: 50px;
   padding: 3em;
@@ -255,10 +254,10 @@ body {
 
 
 #nvidia {
-  margin-left: 15vw;
-  margin-right: 15vw;
-  margin-top: 10%;
-  margin-bottom: 10%;
+  margin-left: 12vw;
+  margin-right: 12vw;
+  margin-top: 20%;
+  margin-bottom: 20%;
 }
 #nvidia h2 {
   text-align: center;
@@ -267,7 +266,7 @@ body {
 
 
 #bombesecrete {
-  margin: 5% 5%;
+  margin: 20% 5%;
   padding: 3% 2%;
   display: flex;
   flex-wrap: wrap;
@@ -305,16 +304,17 @@ body {
 #biologie {
   display: flex;
   flex-wrap: wrap;
-  margin: 5% 10% 0% 10%;
+  flex-direction: row-reverse;
+  margin: 10% 10% 10% 10%;
   padding: 3% 2%;
 }
 #biologie > .texte {
   text-align: right;
-  width: 50%;
-  margin-right: 8em;
+  width: 45vw;
+  margin-right: 3em;
 }
 #Structures {
-  width: 25%;
+  height: 20vw;
   border-radius: 3em;
 }
 
@@ -323,7 +323,7 @@ body {
 #sport {
   display: flex;
   flex-wrap: wrap;
-  margin: 0% 10% 5% 10%;
+  margin: 0% 10% 10% 10%;
   padding: 3% 2%;
 }
 #TuringMarathon {
@@ -368,6 +368,59 @@ body {
 
 
 
+footer {
+  background: linear-gradient(90deg, rgba(35,235,223,0.2) 0%, rgba(4,168,119,0.2) 100%);
+  padding: 0% 2%;
+  margin: 10% 20% 0 20%;
+  border-top: 8px solid #082424;
+  border-left: 8px solid #082424;
+  border-right: 8px solid #082424;
+  border-top-left-radius: 50px; border-top-right-radius: 50px;
+}
+footer > #row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+footer .columns {
+  margin: 2%;
+}
+footer button {
+  margin-top: 10%;
+  font-size: 1em;
+  padding: 0.5em 0.5em;
+}
+footer .col2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .col2 > .logorow1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+footer #logocatvideos {
+  width: 9em;
+  margin: 0.5em;
+}
+footer #logofacebookstalker {
+  width: 7em;
+  margin: 0.5em;
+}
+footer .col2 > .logorow2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+footer .col2 > .logorow2 > img {
+  width: 5em;
+  margin: 0.5em;
+}
+footer p {
+  text-align: center;
+  padding-bottom: 2%;
+  margin: 0;
+}
 
 
 
@@ -376,38 +429,40 @@ body {
 }
 
 h1 {
-  font-size: 5vw;
+  font-size: 6em;
   margin-top: 0;
   margin-bottom: 2%;
 }
 
 h2 {
-  font-size: 3vw;
+  font-size: 4em;
   font-style: italic;
 }
 
 h3 {
-  font-size: 1.5vw;
+  font-size: 2em;
   font-style: italic;
 }
 
 h4 {
-  font-size: 1vw;
+  font-size: 1em;
 }
 
 p {
-  font-size: 1.3vw;
+  font-size: 1.4em;
 }
 
-li,ul {
-  font-size: x-large;
+li, ul {
+  font-size: 1.6em;
 }
 
 a {
   color: white;
   text-decoration: none;
 }
-
+s {
+  text-decoration-style: double;
+}
 a:hover {
   text-decoration: underline;
 }
