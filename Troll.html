@@ -14,8 +14,16 @@
 		}
 	</style>
 </head>
-<body>
+<body onkeydown="tabcheat(event)">
 	<button id="trollbtn" onclick="window.location.href='AlanTuring.html';">RETOUR</button>
+  <script type="text/javascript">
+    function tabcheat(event) {
+      var key = event.keyCode;
+      if (key === 9) {
+        alert("Tricheur ! On utilise pas le Tab !")
+      }
+    }
+  </script>
 	<script type="text/javascript">
 		const dheight = window.screen.availHeight;
 		const dwidth = window.screen.availWidth;
