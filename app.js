@@ -3,29 +3,29 @@ function apples() {
 }
 
 function year() {
+  document.getElementById("yearrep").style.display = "block";
   var year = document.getElementById('year').value;
   if (year == 1970) {
+    document.getElementById('yearrep').classList.remove("bigletter");
     document.getElementById('yearrep').innerHTML = "Bravo ! C'est pourquoi ses travaux sur Enigma n'ont pas pu le défendre contre sa condamnation";
+
   }
   else if (year < 1970) {
-    document.getElementById('year-+').innerHTML = "+";
+    document.getElementById('yearrep').classList.add("bigletter");
+    document.getElementById('yearrep').innerHTML = "+";
   }
   else {
-    document.getElementById('year-+').innerHTML = "-";
+    document.getElementById('yearrep').classList.add("bigletter");
+    document.getElementById('yearrep').innerHTML = "-";
   }
 }
 
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
+function infos() {
+    var panel = document.getElementById("panel");
     if (panel.style.display === "block") {
       panel.style.display = "none";
-    } else {
+    }
+    else {
       panel.style.display = "block";
     }
-  });
 }

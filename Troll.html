@@ -10,7 +10,7 @@
 			position: absolute;
 			left:100px;
 			top:100px;
-			/*transition: all 100ms;*/
+			transition: all 100ms;
 		}
 	</style>
 </head>
@@ -20,9 +20,9 @@
 		const dheight = window.screen.availHeight;
 		const dwidth = window.screen.availWidth;
 		var c = 0;
-		while (c <= 300) {
-			setTimeout(function(){document.getElementById("trollbtn").style.left = String(Math.floor(Math.random()*(dwidth-(dwidth*0.2))) + (dwidth*0.1)) + "px";}, (Math.floor(Math.random() * 500) + 150)*c);
-			setTimeout(function(){document.getElementById("trollbtn").style.top = String(Math.floor(Math.random()*(dheight-(dheight*0.2))) + (dheight*0.1)) + "px";}, (Math.floor(Math.random() * 500) + 150)*c);
+		while (c <= 200) {
+			setTimeout(function(){document.getElementById("trollbtn").style.left = String(Math.floor(Math.random()*(dwidth-(dwidth*0.2))) + (dwidth*0.1)) + "px";}, (Math.floor(Math.random() * 500) + 100)*c);
+			setTimeout(function(){document.getElementById("trollbtn").style.top = String(Math.floor(Math.random()*(dheight-(dheight*0.2))) + (dheight*0.1)) + "px";}, (Math.floor(Math.random() * 500) + 100)*c);
 			c++;
 		}
 	</script>

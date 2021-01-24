@@ -32,24 +32,21 @@ body {
   padding: 3% 2%;
 }
 #presentation > .texte {
-  width: 40vw;
+  width: auto;
   object-position: right;
   text-align: right;
-  margin-right: 1vw;
+  margin-right: 2em;
   margin-top: 3em;
 }
 #presentation > .texte > h1 {
-  font-size: 7vw;
+  font-size: 9em;
 }
 #presentation > #AlanTuring16 {
-  width: 70vh;
-  max-width: 30vw;
-  object-fit: scale-down;
-  max-height: 45vw;
+  height: 50em;
   object-position: right;
   border-radius: 2em;
   margin-right: 1em;
-  margin-left: 3vw;
+  margin-left: 3em;
 }
 
 
@@ -61,17 +58,15 @@ body {
   flex-wrap: wrap;
 }
 #_1936 > .texte {
-  width: 40vw;
+  width: 66%;
   margin-top: 2em;
 }
 #_1936 > #MachineTuring {
-  width: 20vw;
-  height: 40vw;
+  width: 20%;
   background: linear-gradient(45deg, rgba(235,117,35,1) 0%, rgba(168,4,43,1) 100%);
   border-radius: 50px;
   padding: 3em;
   margin-right: 8em;
-  max-height: ;
 }
 
 
@@ -85,7 +80,7 @@ body {
   padding: 3% 2%;
 }
 #guerre > .texte {
-  width: 40vw;
+  width: 55%;
   text-align: justify;
 }
 #guerre > .texte li {
@@ -95,8 +90,9 @@ body {
   text-align: justify;
 }
 #guerre > #BombeCryptographique {
-  width: 30vw;
+  width: 40%;
   height: 20em;
+  object-fit: scale-down;
   margin-left: 3em;
   border-radius: 4em;
 }
@@ -108,20 +104,15 @@ body {
 
 #film {
   background-color: #0f2436;
-  margin-bottom: 5%;
-  margin-left: auto;
-  margin-right: auto;
-  width: 70vw;
+  margin: 5% 20%;
   border-radius: 50px;
-  padding: 3% 2vw;
+  padding: 3% 2%;
   margin-top: 0;
   border-top-left-radius: 0; border-top-right-radius: 0;
 }
 #BackgroundImitationGame {
-  width: 74vw;
-  margin-left: 12.5vw;
-  margin-right: 12.5vw;
-  margin-top: 10%;
+  width: 60%;
+  margin-left: 20%;
   border-top-left-radius: 50px; border-top-right-radius: 50px;
 }
 
@@ -130,11 +121,11 @@ body {
 #_1950 {
   display: flex;
   flex-wrap: wrap;
-  margin: 10% 12vw;
+  margin: 10% 12%;
   padding: 3% 2%;
 }
 #_1950 > .texte {
-  width: 35vw;
+  width: 62%;
   margin-top: 2%;
   text-align: right;
   margin-right: 5em;
@@ -142,7 +133,7 @@ body {
 #_1950 > .texte > p {
 }
 #_1950 > #TestTuring {
-  width: 18vw;
+  width: 25%;
   background: linear-gradient(45deg, rgba(235,117,35,1) 0%, rgba(168,4,43,1) 100%);
   border-radius: 50px;
   padding: 3em;
@@ -229,8 +220,7 @@ body {
 }
 #applesbuttons > .bouton {
   margin: 3%;
-  width: 20%;
-  min-width: 150px;
+  width: 40vw;
 }
 #applerep {
   font-size: 1.7em;
@@ -240,8 +230,9 @@ body {
 
 
 #nvidia {
-  margin-left: 15vw;
-  margin-right: 15vw;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 10%;
   margin-bottom: 10%;
 }
@@ -315,8 +306,6 @@ body {
 #TuringMarathon {
   width: 40%;
   border-radius: 4em;
-  object-fit: contain;
-  height: 30%;
 }
 #sport > .texte {
   width: 50%;
@@ -324,31 +313,13 @@ body {
 }
 
 
-#prixturing {
-  display: flex;
-  flex-wrap: wrap;
-}
-#prixturing > .texte {
-  width: 50%;
-}
+
 #prixturing > table {
   table-layout: fixed;
-  width: 40%;
+  width: 60%;
   text-align: center;
   border: 2px solid white;
   margin: auto;
-  border-collapse: collapse;
-  border-radius: 10em;
-  -moz-border-radius:10em;
-}
-#prixturing td, #prixturing th {
-  border:  solid #ddd;
-  padding: 0.7em;
-  border: 1px solid white;
-}
-#prixturing th {
-  background-color: #A8042B;
-  color: white;
 }
 
 
@@ -361,27 +332,27 @@ body {
 }
 
 h1 {
-  font-size: 5vw;
+  font-size: 600%;
   margin-top: 0;
   margin-bottom: 2%;
 }
 
 h2 {
-  font-size: 3vw;
+  font-size: 300%;
   font-style: italic;
 }
 
 h3 {
-  font-size: 1.5vw;
+  font-size: 150%;
   font-style: italic;
 }
 
 h4 {
-  font-size: 1vw;
+  font-size: 100%;
 }
 
 p {
-  font-size: 1.3vw;
+  font-size: 1.4em;
 }
 
 li,ul {
