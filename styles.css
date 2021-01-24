@@ -187,6 +187,18 @@ body {
 
 
 
+#separator {
+  margin: 10% 0 20% 0;
+  display: flex;
+  justify-content: center;
+}
+#separator > #FFbutton {
+  padding: 1em 2em;
+  font-size: 2.5em;
+  border-radius: 500px;
+}
+
+
 
 #logoapple {
   margin: 5% 2%;
@@ -287,7 +299,6 @@ body {
 
 
 
-
 #biologie {
   display: flex;
   flex-wrap: wrap;
@@ -322,6 +333,7 @@ body {
   width: 50%;
   margin-left: 3em;
 }
+
 
 
 #prixturing {
