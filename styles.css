@@ -435,38 +435,34 @@ footer p {
 
 
 
+
+
+
 .bigletter {
   font-size: 20vw;
 }
-
 h1 {
   font-size: 6em;
   margin-top: 0;
   margin-bottom: 2%;
 }
-
 h2 {
   font-size: 4em;
   font-style: italic;
 }
-
 h3 {
   font-size: 2em;
   font-style: italic;
 }
-
 h4 {
   font-size: 1em;
 }
-
 p {
   font-size: 1.4em;
 }
-
 li, ul {
   font-size: 1.6em;
 }
-
 a {
   color: white;
   text-decoration: none;
@@ -477,7 +473,6 @@ s {
 a:hover {
   text-decoration: underline;
 }
-
 button {
     justify-content: center;
     align-items: center;
@@ -491,8 +486,16 @@ button {
     color: white;
     font-size: 1.4em;
 }
-
 button:hover {
     background: #4837ff;
     transition: all 0.3s ease;
+}
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+
 }

@@ -1,5 +1,5 @@
 function apples() {
-  document.getElementById('applerep').innerHTML = "On ne sait pas ! Mais il se pourrait (on ne sait pas grand chose, oui) que ce soit une référence volontaire de Turing au conte de Blanche Neige";
+  document.getElementById('applerep').innerHTML = "On ne sait pas ! Mais il se pourrait que la pomme croquée (on ne sait pas grand chose, oui) que ce soit une référence volontaire de Turing au conte de Blanche Neige";
 }
 
 function year() {
