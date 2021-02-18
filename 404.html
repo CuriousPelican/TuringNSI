@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Erreur 404</title>
+  <link rel="shortcut icon" href="groarg.ico">
+<style media="screen">
+  #tout {
+    margin: 0;
+    filter: invert(0);
+    transition: all 3s ease;
+  }
+  #image {
+    height: 100vh;
+    width: 100vw;
+    object-fit: fill;
+  }
+  #_404 {
+    position: absolute;
+    top: 32%;
+    bottom: auto;
+    left: 70%;
+    right: 0%;
+    width: 20%;
+    text-align: center;
+    color: white;
+    font-size: 200px;
+    font-weight: bolder;
+  }
+  #page_introuvable {
+    position: absolute;
+    top: 55%;
+    left: 70%;
+    right: 40%;
+    width: 20%;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+  }
+  #bouton {
+    position: absolute;
+    top: 80%;
+    width: 6%;
+    left: 47%;
+    right: 47%;
+    height: 5%;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 15px;
+    color: transparent;
+    display: block;
+  }
+  #bouton:hover {
+    cursor: help;
+    color: #013368;
+    background: #fe329e;
+    transition: all 1s ease;
+    transform: rotate(3600deg) matrix(2, 0, 0, 2, 0, 0);
+  }
+</style>
+</head>
+<script type="text/javascript">
+  function transformation() {
+      document.getElementById("tout").style.filter = "invert(1)"
+      document.getElementById("bouton").style.display = "none"
+      document.getElementById("page_introuvable").innerHTML = "Page toujours introuvable"
+  }
+</script>
+<body id="tout">
+  <img src="nyan_cat.gif" id="image">
+  <div id="_404">404</div>
+  <div id="page_introuvable">Page introuvable</div>
+  <button type="button" onclick="transformation()" id="bouton">Argh !</button>
+</body>

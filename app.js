@@ -1,5 +1,5 @@
 function apples() {
-  document.getElementById('applerep').innerHTML = "On ne sait pas ! Mais il se pourrait que la pomme croquée (on ne sait pas grand chose, oui) que ce soit une référence volontaire de Turing au conte de Blanche Neige";
+  document.getElementById('applerep').innerHTML = "On ne sait pas ! Mais il se pourrait que la pomme croquée (on ne sait pas grand chose, oui) soit une référence volontaire de Turing au conte de Blanche Neige";
 }
 
 function year() {
@@ -26,6 +26,20 @@ function more(id) {
     panel.style.display = "none";
   }
   else {
+    if (id=='funfacts') {
+      window.scrollBy({
+        top: 2000,
+        left: 0,
+        behavior: "auto",
+    });
+  }
     panel.style.display = "block";
+    if (id=='funfacts') {
+      window.scrollBy({
+        top: 700,
+        left: 0,
+        behavior: "smooth",
+      });
+    }
   }
 }

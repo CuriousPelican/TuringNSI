@@ -31,6 +31,7 @@
     </div>
 
     <div id="guerre">
+      <img src="BombeCryptographique.jpg" alt="Une bombe cryptographique" id="BombeCryptographique">
       <div class="texte">
         <h1>Guerre 39-45</h1>
         <h3>Mission: décrypter <i><a href="https://fr.wikipedia.org/wiki/Enigma_(machine)">Enigma</a></i></h3>
@@ -41,7 +42,6 @@
         </ul>
         <button type="button" onclick="more('infoguerre')">+ d'infos</button>
       </div>
-        <img src="BombeCryptographique.jpg" alt="Une bombe cryptographique" id="BombeCryptographique">
       <div id="infoguerre" class="texte2">
         <br><p>La bombe cryptologique teste toutes les combinaisons d'<i>Enigma</i> possibles: Au moyen d'un fragment de texte en clair (=le message non crypté), la bombe recherche les réglages corrects possibles utilisés pour 24 heures (ordre des rotors, réglages des rotors et enfichage du tableau de connexions). Pour chaque réglage possible des rotors, la bombe effectue électriquement une chaîne de déductions logiques fondées sur les mots probables. À chaque occurrence d'une contradiction, la bombe écarte ce réglage et passe au suivant. La plupart des réglages essayés provoquent des contradictions, ils sont alors rejetés et ceux qui restent, peu nombreux, sont alors examinés de près --> c'est l'ancêtre du <a href="https://fr.wikipedia.org/wiki/Attaque_par_force_brute">bruteforce</a> en cryptanalyse avec des conditions</p>
         <h4><a href="https://www.youtube-nocookie.com/embed/7dpFeXV_hqs?start=198" target="_blank">Pour comprendre (quand même mieux que le paragraphe)</a> </h4>
@@ -69,25 +69,26 @@
     <div id="_1952_54">
       <div class="texte">
         <h1>1952-54</h1>
-        <h3>Poursuites judiciaires & mort</h3>
+        <h3>Poursuites judiciaires et mort</h3>
       </div>
       <div id="chronologie">
           <div> <h1>Homosexualité</h1> <p>& <a href="https://fr.wikipedia.org/wiki/Cinq_de_Cambridge" target="_blank">affaire des Cinq de Cambridge</a>: espionnage scientifique au profit de l'Union soviétique par des intellectuels anglais homosexuels</p> </div>
-          <img src="arrow.svg" alt="-->">
+          <img src="arrow.svg" alt="-->" id="arrow1">
           <div> <h1><s>Prison</s></h1><p>Une perte de temps selon lui, Alan Turing évite donc cette solution</p></div> <!-- barré écrit à coté "perte de temps" -->
-          <img src="arrow.svg" alt="-->">
+          <img src="arrow.svg" alt="-->" id="arrow2">
           <div> <h1>Castration chimique</h1><p>Alan pour éviter de finir sa vie en prison, Alan Turing décide de s'injecter des œustrogènes qui ont pour but de réduire sa libido</p> </div>
-          <img src="arrow.svg" alt="-->">
-          <div> <h1>Folie & Suicide</h1> <h3>8 juin 1954</h3> <p>Alan Turing se suicide par empoisonnement au cyanure en emportant dans les sombres méandres de sa tombe son avance scientifique muhahahahaha</p> </div>
+          <img src="arrow.svg" alt="-->" id="arrow3">
+          <div> <h1>Folie & Suicide</h1> <h3>8 juin 1954</h3> <p>Devenu fou, Alan Turing se suicide par empoisonnement au cyanure en emportant dans les sombres méandres de sa tombe son  avance scientifique</p> </div>
         </div>
     </div>
   </div>
 
-  <div id="separator"> <button type="button" id="FFbutton" onclick="more('funfacts')">Groarg !</button> </div>
+  <div id="separator"> <button type="button" id="FFbutton" onclick="more('funfacts')">Groarg ?</button> </div>
 
   <div id="funfacts">
+    <h1 class="grostitre">Funfacts</h1>
     <div id="logoapple">
-      <h2> Logo d'apple, un hommage à Turing ? </h2>
+      <h2> Le logo d'apple, un hommage à Turing ? </h2>
       <div id="applesinfo">
         <img src="AppleLogo.svg" alt="logo apple" id="AppleLogo">
         <h1 class="bigletter">=</h1>
@@ -110,7 +111,6 @@
       <div id="secretleft">
         <h1>Travaux secrets</h1>
         <h3>En quelle année (ex: 2077) ses travaux contre <i>Enigma</i> ont ils commencé à être rendus publics ?</h3>
-        <p>(il est possible que vous receviez quelques alertes JS)</p>
       </div>
       <div id="secretright">
         <input id="year" type="number" name="Année : " value="">
@@ -179,7 +179,7 @@
       <div class="col1 columns">
         <p>Nous contacter:</p>
         <p>xXDarkShadowSniperXx@wanahoo.fr</p>
-        <button type="button" onclick="window.location.href='Troll.html';">Le bouton sur lequel ne surtout surtout pas appuyer</button>
+        <button type="button" onclick="window.location.href='Troll.html';" id="forbiddenbutton">Le bouton sur lequel ne surtout surtout pas appuyer</button>
       </div>
       <div class="col2 columns">
         <p>Nos reseaux:</p>
@@ -193,7 +193,7 @@
         </div>
       </div>
     </div>
-    <p>© Egoistcorp 2021 - <a href="../CharlesBabbage/404.html">+∞</a></p>
+    <p>© Egoistcorp 2021 - <a href="404.html">+∞</a></p>
   </footer>
   <script src="app.js"></script>
 </body>
