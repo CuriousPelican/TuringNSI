@@ -504,6 +504,12 @@ footer .col2 > .logorow2 > img {
   width: 5em;
   margin: 0.5em;
 }
+footer > #footerend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
 footer p {
   text-align: center;
   padding-bottom: 2%;
