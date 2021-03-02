@@ -5,33 +5,42 @@
   <title>Héhé</title>
 	<link rel="stylesheet" href="styles.css">
   <link rel="shortcut icon" href="groarg.ico">
+  <!-- 2ème css pour le bouton "retour" -->
 	<style media="screen">
 		#trollbtn {
-			position: absolute;
+			position: absolute; /* position absolue définie par son écart avec les bords gauche & haut de la page */
 			left:100px;
 			top:100px;
-			transition: all 100ms;
+			transition: all 100ms; /* le bouton se déplace & ne se téléporte pas */
 		}
 	</style>
 </head>
-<body onkeydown="tabcheat(event)">
-	<button id="trollbtn" onclick="window.location.href='AlanTuring.html';">RETOUR</button>
-  <script type="text/javascript">
+<body onkeydown="tabcheat(event)"> <!-- détecte si la touche tab est rpéssée (pour empêcher de tricher) & déclanche la fonction tabcheat() -->
+	<button id="trollbtn" onclick="window.location.href='AlanTuring.html';">RETOUR</button> <!-- Si l'utilisateur arrive a cliquer sur le bouton (héhé) il sera redirigé vers la page principale (subterfuge pour mettre un lien dans un bouton) -->
+  <script type="text/javascript"> // script & fonction activée par la détection de l'appui de la touche tab
     function tabcheat(event) {
-      var key = event.keyCode;
-      if (key === 9) {
-        alert("Tricheur ! On utilise pas le Tab !")
+      var key = event.keyCode; // detecte quelle touche est pressée
+      if (key === 9) { // si son code == 9 (celui de tab)
+        alert("Tricheur ! On utilise pas le Tab !") // affiche une alerte JS
       }
     }
+    // note: le "event" est impératif en paramètre mais devient une variable une fois dans la fonction
+    // on aurait pu mettre <body onkeydown="tabcheat(event)"> || function tabcheat(hoho) || var key = ohoh.keyCode;
+    // nous l'avons laissé par convention
   </script>
-	<script type="text/javascript">
-		const dheight = window.screen.availHeight;
-		const dwidth = window.screen.availWidth;
-		var c = 0;
-		while (c <= 200) {
+	<script type="text/javascript"> //2nd scrit (ils auraient pu être en un seul) qui fait bouger le bouton
+		const dheight = window.screen.availHeight; // la constante dheight prend la valeur de la hauteur en pixels du terminal client
+		const dwidth = window.screen.availWidth; // la constante dwidth prend la valeur de la largeur en pixels du terminal client
+		var c = 0; // le compteur de déplacements est initialisé à zero
+		while (c <= 200) { // tant que c <= 200
+      // setTimeout(fonction à executer, délai avant execution) programme un évènement après un certain délai (technique asynchrone utilisée car il n'existe malheuresement pas de méthode synchone en JS natif*)
+      // *note: c'est pourquoi le bouton bouge durant un certain délai seulement (on ne peut effecter un while car les opérations de déplacement sont "programmées à l'avance" & on ne peut pas en programmer à l'infini car cela ferait planter le navigateur)
 			setTimeout(function(){document.getElementById("trollbtn").style.left = String(Math.floor(Math.random()*(dwidth-(dwidth*0.2))) + (dwidth*0.1)) + "px";}, (Math.floor(Math.random() * 500) + 100)*c);
+      // change la position horizontale du bouton (par rapport à la gauche) à une valeur aléatoire entre 10% (largeur totale * 0.1) & 80% (largeur totale - (0,2 * largeur totale)) de la largeur totale (converti en chaine de caractères) pixels (pour éviter que le bouton sorte de la page)
+      // et cela après (équivalent toutes les x périodes de temps) c*(100 à 600)ms. Soit 100ms + arrondi à l'unité inférieure de (nb aléatoire entre 0 & 1 * 500)ms
 			setTimeout(function(){document.getElementById("trollbtn").style.top = String(Math.floor(Math.random()*(dheight-(dheight*0.2))) + (dheight*0.1)) + "px";}, (Math.floor(Math.random() * 500) + 100)*c);
-			c++;
+      // pareil que les explications d'au dessus mais pour la position verticale du bouton
+			c++; // on incrémente le compteur de 1
 		}
 	</script>
 </body>
