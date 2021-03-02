@@ -6,17 +6,16 @@
   <link rel="shortcut icon" href="groarg.ico">
 <style media="screen">
   #tout {
-    margin: 0;
-    filter: invert(0);
-    transition: all 3s ease;
+    margin: 0; /*on supprime toutes les marges qui sont appliquées de base à la page*/
+    transition: all 3s ease; /*on déclare que toutes les transition doivent s'opèrer en 3s doucement ("ease")*/
   }
   #image {
     height: 100vh;
     width: 100vw;
-    object-fit: fill;
+    object-fit: fill; /*on ordonne de zommer si nécessaire dans l'image pour occuper toute la page*/
   }
   #_404 {
-    position: absolute;
+    position: absolute; /*on déclare la position du texte "absolu" pour qu'il se place là où on le lui dit, s'en se préocupper qu'il se trouve sur une image*/
     top: 32%;
     bottom: auto;
     left: 70%;
@@ -28,7 +27,7 @@
     font-weight: bolder;
   }
   #page_introuvable {
-    position: absolute;
+    position: absolute; /*on déclare la position du texte "absolu" pour qu'il se place là où on le lui dit, s'en se préocupper qu'il se trouve sur une image*/
     top: 55%;
     left: 70%;
     right: 40%;
@@ -38,39 +37,39 @@
     font-size: 30px;
   }
   #bouton {
-    position: absolute;
+    position: absolute; /*on déclare la position du bouton "absolu" pour qu'il se place là où on le lui dit, s'en se préocupper qu'il se trouve sur une image*/
     top: 80%;
     width: 6%;
     left: 47%;
     right: 47%;
     height: 5%;
     border-radius: 10px;
-    border: none;
+    border: none; /*on supprime sa bordure et son contour (qui est moche)*/
     outline: none;
-    background-color: transparent;
+    background-color: transparent; /*on déclare sa couleur à "transparent", il est donc transparent, il prend la couleur de ce qu'il y a "en-dessous"*/
     font-size: 15px;
-    color: transparent;
-    display: block;
+    color: transparent; /*on met aussi le texte transparent*/
+    display: block; /*on le fait occuper toute la largeur disponible (la balise, pas la partie visuelle)*/
   }
   #bouton:hover {
-    cursor: help;
+    cursor: help; /*on change le curseur lorsque l'on passe sur le bouton en un point d'interrogation*/
     color: #013368;
     background: #fe329e;
-    transition: all 1s ease;
-    transform: rotate(3600deg) matrix(2, 0, 0, 2, 0, 0);
+    transition: all 1s ease; /*on déclare que toutes les transition du bouton s'opèrent en 1s, doucement ("ease")*/
+    transform: rotate(3600deg) matrix(2, 0, 0, 2, 0, 0); /*on effectue une rotation au bouton (10 tours)(rotate) et on le fait s'étendre sur l'axe x et y de 200% ce qui le fait grossir (matrix)*/
   }
 </style>
 </head>
 <script type="text/javascript">
-  function transformation() {
-      document.getElementById("tout").style.filter = "invert(1)"
-      document.getElementById("bouton").style.display = "none"
-      document.getElementById("page_introuvable").innerHTML = "Page toujours introuvable"
+  function transformation() { /*on déclare une nouvelle fonction "transformation"*/
+      document.getElementById("tout").style.filter = "invert(1)" /*on applique un filtre d'inversion des couleurs à 100% (=1)*/
+      document.getElementById("bouton").style.display = "none" /*on cache le bouton*/
+      document.getElementById("page_introuvable").innerHTML = "Page toujours introuvable" /*on modifie le texte pour rajouter le "toujours"*/
   }
 </script>
 <body id="tout">
   <img src="nyan_cat.gif" id="image">
   <div id="_404">404</div>
   <div id="page_introuvable">Page introuvable</div>
-  <button type="button" onclick="transformation()" id="bouton">Argh !</button>
+  <button type="button" onclick="transformation()" id="bouton">Argh !</button> <!-- On crée un bouton qui éxécute la fonction "transformation" du JS -->
 </body>

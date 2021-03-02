@@ -8,10 +8,13 @@
 </head>
 
 <body>
+  <!-- Partie "sérieuse" -->
   <div id="histoire">
+
+    <!-- Chaque sous partie est organisée dans une div -->
     <div id="presentation">
       <img src="AlanTuring16.jpg" alt="Alan Turing" id="AlanTuring16">
-        <div class="texte">
+        <div class="texte"> <!-- classe "texte" afin de mettre en forme de la même façon toutes les divs de ... texte justement -->
           <h1>Alan Turing</h1>
           <h3>Informaticien, Mathématicien, Cryptanalyste, Biologiste & Marathonien</h3>
           <h4>23 juin 1912 - 7 juin 1954</h4>
@@ -23,9 +26,8 @@
         <div class="texte">
           <h1> 1936 </h1>
           <h3> "On computable numbers" </h3>
-            <br><p>Résolution du <a href="https://fr.wikipedia.org/wiki/Probl%C3%A8me_de_la_d%C3%A9cision">problème de l'arrêt</a>...<br>
+            <br><p>Résolution du <a href="https://fr.wikipedia.org/wiki/Probl%C3%A8me_de_la_d%C3%A9cision">problème de l'arrêt</a>...<br> <!-- br: retour à la ligne -->
             ... grâce à la <a href="https://fr.wikipedia.org/wiki/Machine_de_Turing">machine de Turing</a></p>
-      <!-- image a faire glisser depuis la droite -->
         <br><p> La tête (en blanc) lit le ruban (en noir) et modifie son état en fonction de ce qu'elle lit et de son programme, cela représente la base de l'algorithmique. Cliquez <a href="https://youtu.be/7dpFeXV_hqs?t=101">ici</a> pour mieux comprendre</p>
       </div>
     </div>
@@ -40,15 +42,15 @@
           <li>Créé la <a href="https://fr.wikipedia.org/wiki/Bombe_(%C3%A9lectrom%C3%A9canique)"><b>bombe cryptographique</b></a> qui teste toutes les combinaisons possibles</li>
           <li>Résultat: guerre probablement raccourcie de 2ans et 14M de vies sauvées</li>
         </ul>
-        <button type="button" onclick="more('infoguerre')">+ d'infos</button>
+        <button type="button" onclick="more('infoguerre')">+ d'infos</button> <!-- onclick="more('infoguerre')": apelle la fonction more du JS avec en paramètre la chaine de caratères "infoguerre" -->
       </div>
-      <div id="infoguerre" class="texte2">
+      <div id="infoguerre" class="texte2"> <!-- Notre usage des classes est parfois sans réelle raison, c'était seulement la solution la plus simple que l'on ait trouvé sur le moment -->
         <br><p>La bombe cryptologique teste toutes les combinaisons d'<i>Enigma</i> possibles: Au moyen d'un fragment de texte en clair (=le message non crypté), la bombe recherche les réglages corrects possibles utilisés pour 24 heures (ordre des rotors, réglages des rotors et enfichage du tableau de connexions). Pour chaque réglage possible des rotors, la bombe effectue électriquement une chaîne de déductions logiques fondées sur les mots probables. À chaque occurrence d'une contradiction, la bombe écarte ce réglage et passe au suivant. La plupart des réglages essayés provoquent des contradictions, ils sont alors rejetés et ceux qui restent, peu nombreux, sont alors examinés de près --> c'est l'ancêtre du <a href="https://fr.wikipedia.org/wiki/Attaque_par_force_brute">bruteforce</a> en cryptanalyse avec des conditions</p>
         <h4><a href="https://www.youtube-nocookie.com/embed/7dpFeXV_hqs?start=198" target="_blank">Pour comprendre (quand même mieux que le paragraphe)</a> </h4>
       </div>
     </div>
 
-    <img src="BackgroundImitationGame.jpg" alt="Affiche du film « The imitation game »" id="BackgroundImitationGame">
+    <img src="BackgroundImitationGame.jpg" alt="Affiche du film « The imitation game »" id="BackgroundImitationGame"> <!-- Image sortie de la div, c'était plus simple pour la mise en forme -->
     <div id="film">
       <h1>The Imitation Game</h1>
       <h3> Biographie cinématographique sortie en 2014 </h3>
@@ -74,17 +76,20 @@
       <div id="chronologie">
           <div> <h1>Homosexualité</h1> <p>& <a href="https://fr.wikipedia.org/wiki/Cinq_de_Cambridge" target="_blank">affaire des Cinq de Cambridge</a>: espionnage scientifique au profit de l'Union soviétique par des intellectuels anglais homosexuels</p> </div>
           <img src="arrow.svg" alt="-->" id="arrow1">
-          <div> <h1><s>Prison</s></h1><p>Une perte de temps selon lui, Alan Turing évite donc cette solution</p></div> <!-- barré écrit à coté "perte de temps" -->
+          <div> <h1><s>Prison</s></h1><p>Une perte de temps selon lui, Alan Turing évite donc cette solution</p></div>
           <img src="arrow.svg" alt="-->" id="arrow2">
           <div> <h1>Castration chimique</h1><p>Alan pour éviter de finir sa vie en prison, Alan Turing décide de s'injecter des œustrogènes qui ont pour but de réduire sa libido</p> </div>
           <img src="arrow.svg" alt="-->" id="arrow3">
           <div> <h1>Folie & Suicide</h1> <h3>8 juin 1954</h3> <p>Devenu fou, Alan Turing se suicide par empoisonnement au cyanure en emportant dans les sombres méandres de sa tombe son  avance scientifique</p> </div>
         </div>
     </div>
+
   </div>
 
+  <!-- Séparateur & bouton pour afficher la deuxième partie -->
   <div id="separator"> <button type="button" id="FFbutton" onclick="more('funfacts')">Groarg ?</button> </div>
 
+  <!-- Partie moins connue & sérieuse  -->
   <div id="funfacts">
     <h1 class="grostitre">Funfacts</h1>
     <div id="logoapple">
@@ -96,14 +101,14 @@
         <h1 class="bigletter">?</h1>
       </div>
       <div id="applesbuttons">
-        <button type="button" onclick="apples()" class="bouton _1">OUI</button>
+        <button type="button" onclick="apples()" class="bouton _1">OUI</button> <!-- les classes ne peuvent commencer par un caractère de type numérique (comme en python) -->
         <button type="button" onclick="apples()" class="bouton _2">NON</button>
       </div>
-      <p id="applerep"></p>
+      <p id="applerep"></p> <!-- paragraphe rempli par le JS pour répondre à l'utilisateur -->
     </div>
 
     <div id="nvidia" class="sections">
-      <h2>Une <a href="https://www.nvidia.com/fr-fr/geforce/turing/" target="_blank" title="Architecture Turing">nouvelle architecture de GPU</a></h2>
+      <h2>Une <a href="https://www.youtube.com/watch?v=_36yNWw_07g" target="_blank" title="Architecture Turing">nouvelle architecture de GPU</a></h2>
       <p>En août 2018, Nvidia annonce une nouvelle architecture de GPU appelée "Turing", en référence bien sûr à notre cher Alan, d'autant plus que la nouvelle architecture apporte des cœurs spéciaux dédiés à l'IA.</p>
     </div>
 
@@ -113,9 +118,9 @@
         <h3>En quelle année (ex: 2077) ses travaux contre <i>Enigma</i> ont ils commencé à être rendus publics ?</h3>
       </div>
       <div id="secretright">
-        <input id="year" type="number" name="Année : " value="">
+        <input id="year" type="number" name="Année : " value=""> <!-- input qui stocke l'année entrée par l'utilisateur  -->
         <button type="button" onclick="year()" class="bouton">Envoyer</button>
-        <p id="yearrep"></p>
+        <p id="yearrep"></p> <!-- paragraphe rempli par le JS pour répondre à l'utilisateur -->
       </div>
     </div>
 
@@ -145,13 +150,13 @@
       </div>
       <table>
       <caption>Certains lauréats</caption>
-        <tr>
-          <th>Année</th>
+        <tr> <!-- ligne du tableau -->
+          <th>Année</th> <!-- élément "titre" dans la 1ère ligne & 1ère colonne -->
           <th>Nom(s)</th>
           <th>Motivation(s)</th>
         </tr>
-        <tr>
-          <td>1971</td>
+        <tr> <!-- autre ligne -->
+          <td>1971</td> <!-- élément dans la 2ème ligne & 1ère colonne -->
           <td><a href="https://fr.wikipedia.org/wiki/John_McCarthy" title="John McCarthy" target="_blank">John McCarthy</a></td>
           <td><a href="https://fr.wikipedia.org/wiki/Intelligence_artificielle" title="Intelligence artificielle" target="_blank">Intelligence artificielle</a></td>
         </tr>
@@ -175,29 +180,35 @@
   </div>
   <footer>
     <img src="groarginclogo.svg" alt="GroargIncLogo" id="groarginclogo">
-    <div id="row">
-      <div class="col1 columns">
+
+    <div id="row"> <!-- on recréé un "tableau" d'éléments que l'on organise à l'aide de flexbox (on aurait pu utiliser une grid) -->
+
+      <div class="col1 columns"> <!-- 1ère colonne -->
         <p>Nous contacter:</p>
         <p>xXDarkShadowSniperXx@wanahoo.fr</p>
         <button type="button" onclick="window.location.href='Troll.html';" id="forbiddenbutton">Le bouton sur lequel ne surtout surtout pas appuyer</button>
       </div>
+
       <div class="col2 columns">
         <p>Nos reseaux:</p>
         <div class="logorow1">
           <img src="logocatvideos.svg" alt="logocatvideos" id="logocatvideos">
           <img src="logofacebookstalker.png" alt="logofacebookstalker" id="logofacebookstalker">
         </div>
+
         <div class="logorow2">
           <img src="logotiktok.png" alt="logotiktok">
           <img src="logotwitter.png" alt="logotwitter">
         </div>
+
       </div>
     </div>
-    <div id="footerend">
+
+    <div id="footerend"> <!-- dernière ligne en dessous -->
       <img id="groargif" src="groar.gif" alt="Groooooaaar" width="15%">
       <p>© Egoistcorp 2021 - <a href="404.html">+∞</a></p>
     </div>
   </footer>
-  <script src="app.js"></script>
+  <script src="app.js"></script> <!-- lien du script à fin pour éviter les soucis de non existance de certains éléments -->
 </body>
 </html>

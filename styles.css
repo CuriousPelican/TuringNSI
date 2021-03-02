@@ -1,9 +1,9 @@
 body {
-  margin: 0;
+  margin: 0; /*on supprime les petites marges qui sont attribuées de base aux bords de la page*/
   color: white;
   background-color: #19313A;
-  line-height: 1.3;
-  font-family:
+  line-height: 1.3; /*On définit l'espace qui sépare deux lignes, pour rendre les textes plus aérés qu'ils ne le sont de base*/
+  font-family:  /*On déclare une liste de polices de caractères "classiques" qui seront utilisées dans l'ordre de compatibilité avec le naviguateur*/
       '-apple-system',
       'system-ui',
       'BlinkMacSystemFont',
@@ -18,12 +18,12 @@ body {
 }
 
 html {
-  scroll-behavior: "smooth";
+  scroll-behavior: "smooth"; /*on rend les "scrolls" automatiques doux, pas instantanés*/
 }
 
-.sections {
+.sections { /*désigne les <div> qui contiennent chaque petit paragraphe (thème)*/
   background-color: #0f2436;
-  border-radius: 50px;
+  border-radius: 50px;  /*applique un arrondi sur les bords*/
   padding: 3% 2%;
 }
 
@@ -32,16 +32,15 @@ html {
 }
 
 #presentation {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row-reverse;
+  display: flex; /*ces deux lignes seront utilisées tout au long de la page css, ils utilisent les flex-box, qui permettent d'avoir une plus grande liberté quant au placement des balises sur la page*/
+  flex-wrap: wrap; /* si l'écran est trop petit pour afficher tous les élements, ils seront automatiquement en dessous pour ne pas avoir a scroller vers la droite */
+  flex-direction: row-reverse;  /*On inverse l'ordre des colonnes pour que tout s'aligne à droite*/
   margin: 2% 5% 5% 5%;
   padding: 3% 2%;
 }
-#presentation > .texte {
+#presentation > .texte { /*la balise de class "texte" dans la balise d'Id "presentation"*/
   width: 55%;
-  object-position: right;
-  text-align: right;
+  text-align: right; /*On aligne le texte à droite*/
   margin-right: 1vw;
   margin-top: 3em;
 }
@@ -50,9 +49,9 @@ html {
 }
 #presentation > #AlanTuring16 {
   width: 70vh;
-  max-width: 30vw;
-  object-fit: scale-down;
-  max-height: 45vw;
+  max-width: 30vw; /*on limite la largeur de l'image pour laisser de la plce au texte*/
+  object-fit: scale-down; /*on ordonne de réduire la taille de l'image s'il le faut pour que toute l'ilage soit toujours visible, qu'elle ne se fasse pas rogner*/
+  max-height: 45vw; /*on limite la hauteur de l'image pour pas qu'elle ne prenne de la place inutile*/
   object-position: right;
   border-radius: 2em;
   margin-right: 1em;
@@ -74,7 +73,7 @@ html {
 #_1936 > #MachineTuring {
   width: 20vw;
   height: 40vw;
-  background: linear-gradient(45deg, rgba(235,117,35,1) 0%, rgba(168,4,43,1) 100%);
+  background: linear-gradient(45deg, rgba(235,117,35,1) 0%, rgba(168,4,43,1) 100%); /*on utilise "linear gradient" pour réaliser de beaux dégradés (les dégradés moches sont aussi faits de la même façon)*/
   border-radius: 50px;
   padding: 3em;
   margin-right: 6vw;
@@ -93,9 +92,9 @@ html {
 }
 #guerre > .texte {
   width: 40vw;
-  text-align: justify;
+  text-align: justify; /*on indente le texte en "justifié" pour qu'il prenne toute la largeur disponible*/
 }
-#guerre > .texte li {
+#guerre > .texte li { /*désigne les balises de type li dans la balise de class "texte" de la balise d'Id "guerre"*/
   font-size: 18px;
 }
 #guerre > .texte2 {
@@ -107,9 +106,9 @@ html {
   border-radius: 2em;
 }
 #infoguerre {
-  display: none;
+  display: none; /*on cache la balise (elle n'est tout simplement pas visible). Cette balise sera rendue visible par la suite grâçe à une fonction JS*/
 }
-@media (max-aspect-ratio: 5/3) {
+@media (max-aspect-ratio: 5/3) { /*prend en compte les ordres contenus dans les accolades seulement si le ratio de l'écran sur le quel est visionné la page est de 5/3 ou moins*/
   #guerre > #BombeCryptographique {
     height: 35vw;
     margin: 1em auto;
@@ -125,13 +124,14 @@ html {
 #film {
   background-color: #0f2436;
   margin-bottom: 5%;
-  margin-left: auto;
+  margin-left: auto; /*on met les deux marges droite/gauche en "auto" pour qu'elles s'égalisent, et que la balise soit ainsi centrée*/
   margin-right: auto;
   width: 70vw;
   border-radius: 50px;
   padding: 3% 2vw;
   margin-top: 0;
-  border-top-left-radius: 0; border-top-right-radius: 0;
+  border-top-left-radius: 0; /*on met un arrondi seulement en bas, puisque la partie supérieure sera occupée par une image dirrectement "collée" à la balise (oui, il y a plus simple)*/
+  border-top-right-radius: 0;
 }
 #BackgroundImitationGame {
   width: 74vw;
@@ -156,22 +156,20 @@ html {
   text-align: right;
   margin-right: 4vw;
 }
-#_1950 > .texte > p {
-}
 #_1950 > #TestTuring {
   height: 20vw;
   background: linear-gradient(45deg, rgba(235,117,35,1) 0%, rgba(168,4,43,1) 100%);
   border-radius: 50px;
   padding: 3em;
 }
-@media (max-aspect-ratio: 1/1) {
+@media (max-aspect-ratio: 1/1) { /*prend en compte les ordres contenus dans les accolades seulement si le ratio de l'écran sur le quel est visionné la page est de 1 ou moins (rectangle format paysage)*/
   #_1950 > #TestTuring {
     height: 30vh;
     width: auto;
     margin: auto;
   }
 }
-@media (max-aspect-ratio: 1/1) {
+@media (max-aspect-ratio: 1/1) { /*prend en compte les ordres contenus dans les accolades seulement si le ratio de l'écran sur le quel est visionné la page est de 1 (carré) ou moins (rectangle format paysage)*/
   #_1950 > .texte {
     height: auto;
     width: 100%;
@@ -195,7 +193,7 @@ html {
   flex-wrap: wrap;
   justify-content: center;
 }
-#_1952_54 > #chronologie > div > h3 {
+#_1952_54 > #chronologie > div > h3 { /*désigne les balises h3 dans les balises de type <div> dans la balise d'Id "chronologie" dans la balise d'Id "_1952_54"*/
   text-align: center;
 }
 #_1952_54 > #chronologie > img {
@@ -206,31 +204,31 @@ html {
   background-color: #0f2436;
   font-size: 0.7em;
 }
-@media (min-aspect-ratio: 5/3) {
+@media (min-aspect-ratio: 5/3) { /*prend en compte les ordres contenus dans les accolades seulement si le ratio de l'écran sur le quel est visionné la page est de 5/3 ou plus*/
   #_1952_54 > #chronologie > div {
-    width: 15vw;
+    width: 15vw; /*on fait des cases petites qui se mettent à 4 sur une seule ligne*/
     margin: 0% 1vw;
     padding: 3% 2vw;
   }
 }
-@media (max-aspect-ratio: 5/3) {
+@media (max-aspect-ratio: 5/3) { /*prend en compte les ordres contenus dans les accolades seulement si le ratio de l'écran sur le quel est visionné la page est de 5/3 ou moins*/
   #_1952_54 > #chronologie > div {
-    width: 35vw;
+    width: 35vw; /*on fait des cases plus grosses, destinées à se mettre à deux par ligne. Les cases s'organisent donc toutes seules sur deux lignes*/
     margin: 5% 1vw;
     padding: 3% 2vw;
   }
   #arrow2 {
-    display: none;
+    display: none; /*on cache la deuxième flèche car elle pointe de la case 2 à la case 3 qui ne sont plus sur la même ligne*/
   }
 }
-@media (max-aspect-ratio: 1/1) {
+@media (max-aspect-ratio: 1/1) { /*prend en compte les ordres contenus dans les accolades seulement si le ratio de l'écran sur le quel est visionné la page est de 1 (carré) ou moins (rectangle format paysage)*/
   #_1952_54 > #chronologie > div {
-    width: 75vw;
+    width: 75vw; /*on fait des cases plus grosses encore, destinées à occuper toutes seules une ligne entière*/
     margin: 5% 1vw;
     padding: 3% 2vw;
   }
   #arrow1 {
-    display: none;
+    display: none; /*on chache toutes les flèches, car chaque case est sur une ligne différente*/
   }
   #arrow2 {
     display: none;
@@ -257,7 +255,7 @@ html {
 #separator {
   margin: 300px 0;
   display: flex;
-  justify-content: center;
+  justify-content: center; /*on centre les balises contenues par la balise d'Id "separator"*/
 }
 #separator > #FFbutton {
   padding: 1em 2em;
@@ -269,7 +267,7 @@ html {
 }
 #funfacts > .grostitre {
   text-align: center;
-  font-family: cursive;
+  font-family: cursive; /*on utilise une police de caractère de style "cursive", qui simule une écriture manuscrite, parfait pour faire une transition vers les éléments plus drôles de la page*/
   font-size: 15em;
   margin-top: 700px;
   margin-bottom: 300px;
@@ -295,7 +293,7 @@ html {
 #AppleLogo {
   width: 20%;
   padding: 5%;
-  filter: invert(1);
+  filter: invert(1); /*on ajoute le filtre "invert" à 100% (100% = 1) qui "renverse" les couleurs. Ca permet au logo d'apple originellement noir de devenir blanc (ce qui va mieux avec le reste de la page)*/
 }
 #BittenApple {
   width: 100%;
@@ -362,16 +360,13 @@ html {
   font-weight: bolder;
   border-radius: 50px;
   margin: 8px 0;
-  text-decoration: none;
-  border: none;
-  outline: none;
   margin-right: 0.5em;
 }
 #bombesecrete > #secretright > .bigletter {
   height: 10vh;
 }
 #yearrep {
-  display: none;
+  display: none; /*on cache d'abord la réponse, on la fera apparaître lorsque l'utilisateur aura envoyé sa réponse*/
   margin: 0%;
 }
 
@@ -405,7 +400,7 @@ html {
 #TuringMarathon {
   width: 40%;
   border-radius: 4em;
-  object-fit: contain;
+  object-fit: contain; /*on force l'image à s'afficher en entiern même si cela l'oblige à se dézoomer pour passer en entier dans la balise qui la contient*/
   height: 30%;
 }
 #sport > .texte {
@@ -424,14 +419,13 @@ html {
   width: 50%;
 }
 #prixturing > table {
-  table-layout: fixed;
+  table-layout: fixed; /*on fixe la largeur des colonnes du tableau*/
   width: 40%;
   text-align: center;
   border: 2px solid white;
   margin: auto;
-  border-collapse: collapse;
+  border-collapse: collapse; /* fait fusionner les bordures de deux cases adjacentes*/
   border-radius: 10em;
-  -moz-border-radius:10em;
 }
 #prixturing td, #prixturing th {
   border:  solid #ddd;
@@ -452,15 +446,16 @@ footer {
   border-top: 4px solid black;
   border-left: 4px solid black;
   border-right: 4px solid black;
-  border-top-left-radius: 50px; border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
   color: black;
 }
 footer a {
   color: black;
 }
 footer #groarginclogo {
-  display: block;
-  margin-left: auto;
+  display: block; /*on le fait prendre toute la largeur disponible*/
+  margin-left: auto; /*on ajuste les deux marges pour qu'elles s'égalisent*/
   margin-right: auto;
   width: 50%;
   margin-bottom: 2%;
@@ -480,9 +475,9 @@ footer button {
 }
 footer .col2 {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /*organise les éléments dans l'ordre des colonnes*/
   justify-content: center;
-  align-items: center;
+  align-items: center; /*place les éléments au centre de leur contenants*/
 }
 footer .col2 > .logorow1 {
   display: flex;
@@ -548,22 +543,21 @@ li, ul {
 }
 a {
   color: white;
-  text-decoration: underline;
-  text-decoration
+  text-decoration: underline; /*on met toutes les balises contenant des liens en soulignées*/
 }
 s {
-  text-decoration-style: double;
+  text-decoration-style: double; /*toutes les balises "barrées" (balise <s>) sont doublement barrées*/
 }
 a:hover {
-  text-decoration-style: double;
+  text-decoration-style: double; /*lorsque l'on passe la souris sur une balise de lien hypertexte, celle-ci se souligne doublement (ajoute un peu d'interaction)*/
 }
 button {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  cursor: pointer;
+  cursor: pointer; /*lorsque l'on passe sur une balise "button" le curseur se change pour signifier que c'est un lien cliquable*/
   padding: 1em 2em;
-  border: none;
+  border: none; /*on supprime la bordure et le contour appliqué de base au boutons en html*/
   outline: none;
   border-radius: 10px;
   background: #f77062;
@@ -571,15 +565,10 @@ button {
   font-size: 1.4em;
 }
 button:hover {
-    background: #4837ff;
-    transition: all 0.3s ease;
-    transform: matrix(1.05, 0, 0, 1.05, 0, 0);
+    background: #4837ff; /*on change la couleur du bouton lorsque l'on passe dessus*/
+    transition: all 0.3s ease; /*on ordonne d'opérer toutes les tansitions "all" en 0.3s "0.3s" doucement "ease"*/
+    transform: matrix(1.05, 0, 0, 1.05, 0, 0); /*on étale le bouton sur l'axe x et y de 105% (cela fait grossir le bouton lorsque l'on passe dessus)*/
 }
 #forbiddenbutton {
-  cursor: not-allowed;
-}
-
-
-@media screen and (max-width: 600px) {
-
+  cursor: not-allowed; /*on chnage le curseur en panneau interdit lorsue l'on passe sur le bouton INTERDIT*/
 }
