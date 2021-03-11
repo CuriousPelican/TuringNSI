@@ -1,0 +1,104 @@
+body {
+  margin: 0px;
+  background-color: #19313A;
+  color: white;
+  font-family:
+      '-apple-system',
+      'system-ui',
+      'BlinkMacSystemFont',
+      'Segoe UI',
+      'Roboto',
+      'Helvetica Neue',
+      'Arial',
+      'sans-serif',
+      'Apple Color Emoji',
+      'Segoe UI Emoji',
+      'Segoe UI Symbol';
+}
+#info {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+  margin: 0 6vw;
+}
+a.bouton {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    padding: 15px 60px;
+    border-radius: 10px;
+    transition-property: background-color;
+    transition-duration: 1s;
+    transition-delay: 1.5s;
+}
+a.bouton:hover {
+  transition: all 0.3s ease;
+  transform: matrix(1.05, 0, 0, 1.05, 0, 0);
+}
+.carte {
+  background-color: transparent;
+  width: 18em;
+  height: 27em;
+  margin: 2em;
+  perspective: 1000px;
+  justify-self: center;
+}
+.container {
+  height: 85%;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.9s;
+  transform-style: preserve-3d;
+}
+.recto > h1 {
+  color: white;
+  top: 98%;
+  position: relative;
+  z-index: 2;
+  transition: all 1s ease;
+}
+.carte:hover .container {
+  transform: rotateY(-180deg);
+}
+.carte:hover .recto > h1 {
+  transform: rotateY(-180deg);
+  top: 4%;
+  z-index: 2;
+}
+.carte:hover .texte {
+  opacity: 1;
+}
+.carte:hover a.bouton {
+  background-color: #19313A;
+}
+.verso > h3 {
+  margin-top: 20%;
+}
+.recto, .verso {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.recto {
+  background-image: url("AlanTuring16.jpg");
+  background-size: cover;
+  border-radius: 20px;
+}
+.verso {
+  background: linear-gradient(45deg, rgba(235,117,35,1) 0%, rgba(168,4,43,1) 100%);
+  color: white;
+  transform: rotateY(180deg);
+  border-radius: 5px;
+}
+.texte {
+  padding: 10px;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-delay: 0.5s;
+}

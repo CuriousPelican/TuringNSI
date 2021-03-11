@@ -1,0 +1,177 @@
+* {box-sizing: border-box;}
+body {
+  margin: 0;
+  background-color: #19313A;
+  font-family:
+      '-apple-system',
+      'system-ui',
+      'BlinkMacSystemFont',
+      'Segoe UI',
+      'Roboto',
+      'Helvetica Neue',
+      'Arial',
+      'sans-serif',
+      'Apple Color Emoji',
+      'Segoe UI Emoji',
+      'Segoe UI Symbol';
+}
+#timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#timeline::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  margin-top: 2em;
+  margin-bottom: 10em;
+  border-radius: 3em;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+}
+.box {
+  display: flex;
+  color: white;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  height: 80%;
+}
+.box::after {
+  content: '';
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  right: -14px;
+  background-color: transparent;
+  border: 14px solid rgba(168,4,43,1);
+  top: 50px;
+  border-radius: 50%;
+  z-index: 1;
+}
+.gauche {
+  left: 0;
+}
+.droite {
+  flex-direction: row-reverse;
+  left: 50%
+}
+.droite::after {
+  left: -14px;
+}
+a.bouton {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    padding: 15px 60px;
+    border-radius: 10px;
+    transition-property: background-color;
+    transition-duration: 1s;
+    transition-delay: 1.5s;
+}
+a.bouton:hover{
+  background-color: #4837ff;
+  transition: all 0.3s ease;
+  transform: matrix(1.05, 0, 0, 1.05, 0, 0);
+}
+.carte {
+  background-color: transparent;
+  width: 20em;
+  height: 27em;
+  margin: 1em;
+  perspective: 1000px;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.gauche > .carte:hover .container {
+  transform: rotateY(-180deg);
+}
+.droite > .carte:hover .container {
+  transform: rotateY(180deg);
+}
+.carte:hover .texte {
+  opacity: 1;
+}
+.carte:hover a.bouton {
+  background-color: #19313A;
+}
+.recto, .verso {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.recto {
+  background-image: url("AlanTuring16.jpg");
+  background-size: cover;
+  border-radius: 20px;
+}
+.verso {
+  background: linear-gradient(45deg, rgba(235,117,35,1) 0%, rgba(168,4,43,1) 100%);
+  color: white;
+  transform: rotateY(180deg);
+  border-radius: 5px;
+}
+.texte {
+  padding: 10px;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-delay: 0.5s;
+}
+
+@media screen and (max-width: 65em) {
+  #timeline::after {
+  left: 31px;
+  }
+  #timeline {
+    width: 36em;
+  }
+  .box {
+    width: 100%;
+  }
+  .gauche, .droite {
+    left: 30px;
+    flex-direction: row-reverse;
+  }
+  .gauche::after, .droite::after {
+  left: -13px;
+  }
+  .carte, .box > h1 {
+    float: left;
+  }
+  .droite {
+    right: 0%;
+  }
+  .gauche > .carte:hover .container {
+    transform: rotateY(180deg);
+  }
+}
+
+h1 {
+  font-size: 4em;
+  margin-top: 0.33em;
+}
+h2 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+h3 {
+  font-style: italic;
+  font-size: 1em;
+}
